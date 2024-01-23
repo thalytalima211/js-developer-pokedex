@@ -1,0 +1,130 @@
+#content {
+    width: 100%;
+    padding: 1rem;
+    margin: auto;
+    border-radius: 1rem;
+}
+
+#info{
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
+    padding-top: 2rem;
+    margin: 0;
+    margin-top: 1rem;
+    border-radius: 1rem;
+}
+
+#name{
+    color: white;
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+#number{
+    text-align: right;
+    color: black;
+    opacity: 0.3;
+    font-size: 1rem;
+}
+
+.cabecalho{
+    list-style: none;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+.cabecalho div{
+    text-align: center;
+    margin: .5rem 0;
+}
+
+.typesDetail{
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.typeDetail{
+    filter: brightness(1.1);
+    color: white;
+    padding: 0.5rem 1rem;
+    margin: 0 0.25rem;
+    border-radius: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+}
+
+#photo{
+    width: 30vw;
+    height: auto;
+    align-items: center;
+    z-index: 1;
+}
+
+#baseStats{
+    text-align: center;
+    color: black;
+    font-size: 2rem;
+    margin: 0;
+}
+
+#statsList{
+    list-style: none;
+    padding: 0;
+}
+
+.stat{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    justify-content: space-around;
+}
+
+.statName{
+    text-transform: capitalize;
+    width: 30%;
+    color: rgb(20 20 23 / 82%);
+}
+
+.statCount{
+    width: 10%;
+    text-align: center;
+}
+
+.progressBar{
+    width: 45%;
+    padding: 0;
+    height: 4px;
+    background-color: #ccc;
+    display: flex;
+}
+
+.progressBar::before{
+    content: "";
+    width: calc(var(--progress) * 1%);
+    background-color: hsl(calc(var(--progress) * 1.2), 80%, 50%);
+}
+
+@media screen and (min-width: 992px) {
+    #content {
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+    }
+    #photo{
+        width: 200px;
+    }
+    #info{
+        max-width: 992px;
+        height: auto;
+        margin: 1rem auto;
+    }
+}
+

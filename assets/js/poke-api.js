@@ -12,13 +12,16 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.types = types
     pokemon.type = type
 
+    const stats = pokeDetail.stats.map((stat) => stat)
+    pokemon.stats = stats
+
     pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
 
     return pokemon
 }
 
 pokeApi.getPokemonDetail = (pokemon) => {
-    return fetch(pokemon.url)
+    return fetch(pokemon.url || url)
         .then((response) => response.json())
         .then(convertPokeApiDetailToPokemon)
 }

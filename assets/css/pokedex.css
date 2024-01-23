@@ -86,11 +86,15 @@
     border-radius: 1rem;
 }
 
+.link{
+    text-decoration: none;
+}
+
 .pokemon .number {
     color: #000;
     opacity: .3;
     text-align: right;
-    font-size: .625rem;
+    font-size: .75rem;
 }
 
 .pokemon .name {
